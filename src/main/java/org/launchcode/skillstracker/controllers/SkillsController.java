@@ -71,15 +71,15 @@ public class SkillsController {
     }
 
 
-    @PostMapping ("{name}")
-    public String skillsWithRequest(@RequestParam String name) {
+    @PostMapping ("form")
+    public String skillsWithRequest(@RequestParam String name, @RequestParam String favoriteOne, @RequestParam String favoriteTwo, @RequestParam String favoriteThree) {
         return "<html>" +
                 "<body>" +
                 "<h1>"+name+"</h1>" +
                 "<h2>You Want To Learn: </h2>" +
-                "<ol><li>"+"</li>" +
-                "<li>{favoriteTwo}}</li>" +
-                "<li>{favoriteThree}</li>" +
+                "<ol><li>"+favoriteOne+"</li>" +
+                "<li>"+favoriteTwo+"</li>" +
+                "<li>"+favoriteThree+"</li>" +
                 "</ol>" +
                 "</body>" +
                 "</html>";
